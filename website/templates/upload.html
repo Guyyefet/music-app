@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV File Upload</title>
+</head>
+<body>
+    <h1>CSV File Upload</h1>
+    <form id="uploadForm" enctype="multipart/form-data" onsubmit="uploadFile(event)">
+        <input type="file" id="fileInput" accept=".csv">
+        <button type="submit">Upload</button>
+    </form>
+    <div id="resultMessage"></div>
+    <table>
+        <tbody id="tableBody"></tbody>
+    </table>
+    <script src="/static/js/upload.js"></script>
+</body>
+</html>
+
+
