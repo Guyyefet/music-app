@@ -1,3 +1,5 @@
+// gets result message from back-end, takes the rows variable and 
+// present it the HTML
 const updateResultMessage = (message, rows) => {
     const resultMessage = document.getElementById('resultMessage');
     resultMessage.innerHTML = message;
@@ -16,6 +18,7 @@ const updateResultMessage = (message, rows) => {
     }
 };
 
+// picks the file that in the form, and makes a POST request to the back-end
 const uploadFile = (event) => {
     event.preventDefault();
     const fileInput = document.getElementById('fileInput');

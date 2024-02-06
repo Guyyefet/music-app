@@ -3,6 +3,8 @@ from flask import Blueprint, render_template, request, Response, jsonify
 views = Blueprint('views', __name__)
 
 @views.route('/', methods=['GET', 'POST'])
+#takes the file that been sent from the front-end, decode and process it
+#then send it back in JSON format
 def upload_file():
     if request.method == 'POST':
         if 'file' not in request.files:
@@ -29,5 +31,6 @@ def upload_file():
 
     return render_template("upload.html")
 
+# make sure that only CSV files are allowed 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in {'csv'}
